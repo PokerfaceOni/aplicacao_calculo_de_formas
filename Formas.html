@@ -1,0 +1,255 @@
+<html>
+    <!--
+
+    Integrantes:
+    
+    Nome: Danilo Lopes da Costa
+    Nome: Gabriella Xavier de Souza Pereira
+
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora de Formas</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2>Tema do projeto: Calculadora de áreas de formas geométricas</h2>
+        <br>
+        <h2>Pra que serve a área?</h2>
+        <p>A área mede a superfície de uma figura plana (base x altura). Algumas figuras, como os triângulos e os círculos, têm fórmulas próprias.</p>
+        <br>
+        
+        <h2 class="pb-2 border-bottom">Cálculo de Formas Geométricas</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+            
+            <!-- Cálculo 1 - Quadrado -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Quadrado</h2>
+              <img src="Imgs/Quadrado.png"><br>
+                Lado do quadrado: <input type="text" id="ladoQ" />
+                <br>
+              <a onclick="areaQuadrado()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área do quadrado -->
+            
+            <script type="text/javascript">
+                
+                function areaQuadrado(){
+                    lado = document.getElementById("ladoQ").value;
+                    document.getElementById("resultado").innerHTML = lado * lado ;
+                }
+            
+            </script>
+            
+            <!-- Cálculo 2 - Trapézio -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Trapézio</h2>
+              <img src="Imgs/Trapezio.png"><br>
+                Base menor: <input type="text" id="baseMenor" /><br>
+                Base maior: <input type="text" id="baseMaior" /><br>
+                Altura: <br><input type="text" id="altura" />
+              <a onclick="areaTrapezio()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado2"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área do trapézio -->
+        
+            <script type="text/javascript">
+                
+                function areaTrapezio(){
+                    baseMenor = document.getElementById("baseMenor").value;
+                    baseMaior = document.getElementById("baseMaior").value;
+                    altura = document.getElementById("altura").value;
+                    document.getElementById("resultado2").innerHTML = ((baseMenor + baseMaior) * altura)/2;
+                }
+            
+            </script>
+            
+            <!-- Cálculo 3 - Retângulo -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Retângulo</h2>
+              <img src="Imgs/Retangulo.png"><br>
+                Base: <br><input type="text" id="baseRetangulo" /><br>
+                Altura: <br><input type="text" id="alturaRetangulo" />
+              <a onclick="areaRetangulo()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado3"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área do retângulo -->
+        
+            <script type="text/javascript">
+                
+                function areaRetangulo(){
+                    base = document.getElementById("baseRetangulo").value;
+                    altura = document.getElementById("alturaRetangulo").value;
+                    document.getElementById("resultado3").innerHTML = base * altura;
+                }
+            
+            </script>
+            
+            <!-- Cálculo 4 - Triângulo Equilátero -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Triângulo Equilátero</h2>
+              <img src="Imgs/TrianguloE.png"><br>
+                Lado do triângulo: <input type="text" id="ladoT" />
+              <a onclick="areaTrianguloE()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado4"/>
+            </div>
+          </div>
+        </div>
+        
+            <!-- Script do cálculo da área do triângulo equilátero -->
+        
+            <script type="text/javascript">
+        
+                function areaTrianguloE(){
+                    
+                    lado = document.getElementById("ladoT").value;
+                    document.getElementById("resultado4").innerHTML = ((lado * lado) * 1.73205080757) / 4;
+                    
+                }
+        
+            </script>
+        
+        <!-- 2a linha de cálculos de formas -->
+
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+              
+              <!-- Cálculo 1 - Triângulo Qualquer -->
+              
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Triângulo Qualquer</h2>
+              <img src="Imgs/TrianguloQ.png"><br>
+                Base: <br><input type="text" id="baseTrianguloQ" /><br>
+                Altura: <br><input type="text" id="alturaTrianguloQ" />
+              <a onclick="areaTrianguloQ()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado5"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área de um triângulo qualquer -->
+            
+            <script type="text/javascript">
+                
+                function areaTrianguloQ(){
+                    base = document.getElementById("baseTrianguloQ").value;
+                    altura = document.getElementById("alturaTrianguloQ").value;
+                    document.getElementById("resultado5").innerHTML = (base * altura) / 2;
+                }
+            
+            </script>
+            
+            <!-- Cálculo 2 - Paralelogramo -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Paralelogramo</h2>
+              <img src="Imgs/Paralelogramo.png"><br>
+                Base: <br><input type="text" id="baseParalelogramo" /><br>
+                Altura: <br><input type="text" id="alturaParalelogramo" />
+              <a onclick="areaParalelogramo()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado6"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área do paralelogramo -->
+
+            <script type="text/javascript">
+                
+                function areaParalelogramo(){
+                    base = document.getElementById("baseParalelogramo").value;
+                    altura = document.getElementById("alturaParalelogramo").value;
+                    document.getElementById("resultado6").innerHTML = base * altura;
+                }
+            
+            </script>
+            
+            <!-- Cálculo 3 - Losângulo -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Losângulo</h2>
+              <img src="Imgs/Losangulo.png"><br>
+                Diagonal menor: <input type="text" id="diagonalMenorL" /><br>
+                Diagonal maior: <input type="text" id="diagonalMaiorL" /><br>
+              <a onclick="areaLosangulo()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado7"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área do losângulo -->
+            
+            <script type="text/javascript">
+                
+                function areaLosangulo(){
+                    baseMenor = document.getElementById("diagonalMenorL").value;
+                    baseMaior = document.getElementById("diagonalMaiorL").value;
+                    document.getElementById("resultado7").innerHTML = (baseMenor + baseMaior) /2;
+                }
+            
+            </script>
+            
+            <!-- Cálculo 4 - Círculo -->
+            
+          <div class="col d-flex align-items-start">
+            <div>
+              <h2>Círculo</h2>
+              <img src="Imgs/Circulo.png"><br>
+                Raio: <br><input type="text" id="raio" />
+              <a onclick="areaCirculo()" class="btn btn-primary">
+                Cálcular
+              </a>
+                <p>O resultado é : <br><span id="resultado8"/>
+            </div>
+          </div>
+            
+            <!-- Script do cálculo da área do círculo -->
+            
+            <script type="text/javascript">
+                
+                function areaCirculo(){
+                    raio = document.getElementById("raio").value;
+                    document.getElementById("resultado8").innerHTML = 3.14 * (raio * raio);
+                }
+            
+            </script>
+            
+        </div>
+    </div>
+    
+        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>
